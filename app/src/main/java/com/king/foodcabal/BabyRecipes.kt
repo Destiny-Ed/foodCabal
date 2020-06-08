@@ -22,13 +22,13 @@ class BabyRecipes : AppCompatActivity() {
 
     private val bannerUnitId : String by lazy {
 
-        "ca-app-pub-8573825847307688/9072956611"
+            "BANNER UNIT ID"
         //test ads_banner_unit
 //        "ca-app-pub-3940256099942544/6300978111"
 
     }
     private val appInstiatialUnitId : String by lazy {
-        "ca-app-pub-8573825847307688/4737237733"
+        "instertitial unit id"
         //test ads_banner_unit
 //        "ca-app-pub-3940256099942544/1033173712"
     }
