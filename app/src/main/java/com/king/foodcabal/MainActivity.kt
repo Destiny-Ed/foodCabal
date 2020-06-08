@@ -45,12 +45,12 @@ class MainActivity : AppCompatActivity() {
 
     private val bannerUnitId : String by lazy {
 
-        "ca-app-pub-8573825847307688/9072956611"
+        "BANNER ADS UNIT ID"
 //        "ca-app-pub-3940256099942544/6300978111"
     }
 
     private val appInstiatialUnitId : String by lazy {
-        "ca-app-pub-8573825847307688/4737237733"
+        "iNTERTIAL UNIT ID"
 //        "ca-app-pub-3940256099942544/1033173712"
     }
 
