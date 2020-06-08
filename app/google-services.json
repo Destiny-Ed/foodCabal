@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "603518791081",
+    "firebase_url": "https://foodcabal-32fa5.firebaseio.com",
+    "project_id": "foodcabal-32fa5",
+    "storage_bucket": "foodcabal-32fa5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603518791081:android:d86d07839622735708a8b8",
+        "android_client_info": {
+          "package_name": "com.king.foodcabal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603518791081-5521vr064rgsgq009tr5n3i8rdidkvje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.king.foodcabal",
+            "certificate_hash": "09e5d20b1840192294564cf69e579b36ed787f22"
+          }
+        },
+        {
+          "client_id": "603518791081-phvl7o5c61fjp63nrgd4ko615b5ckbfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOE0JyyqhqLaRVJ6z9optOX-Y7MJVzYRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603518791081-phvl7o5c61fjp63nrgd4ko615b5ckbfb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

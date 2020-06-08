@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.king.foodcabal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/applogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/applogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name=".AlarmBroadCast"
+            android:enabled="true"></receiver>
+
+        <activity
+            android:name=".error"
+            android:configChanges="uiMode|screenSize|screenLayout|orientation" />
+        <activity
+            android:name=".about"
+            android:configChanges="uiMode|screenSize|screenLayout|orientation"
+            android:label="@string/about" />
+        <activity
+            android:name=".BabyRecipes"
+            android:configChanges="uiMode|screenSize|screenLayout|orientation"
+            android:label="@string/app_baby_name" />
+        <activity
+            android:name=".splash_screen"
+            android:configChanges="uiMode|screenSize|screenLayout|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="uiMode|screenSize|screenLayout|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8573825847307688~9067364986" />
+    </application>
+
+</manifest>

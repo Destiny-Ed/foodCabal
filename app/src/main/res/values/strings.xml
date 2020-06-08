@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FoodCabal</string>
+
+    <string name="app_baby_name">FoodCabal - Baby Recipe</string>
+
+    <string name="about">About</string>
+
+    <string name="reset_password">Reset Password</string>
+
+    <string name="appID">ca-app-pub-8573825847307688~9067364986</string>
+
+    <string name="banner_ads_unit">ca-app-pub-8573825847307688/9072956611</string>
+    <string name="instatial_ads_unit">ca-app-pub-8573825847307688/4737237733</string>
+
+    <string name="errorUrl">file:///android_asset/error.html</string>
+
+    <string name="babyUrl">https://www.shoprite.com.ng/baby/baby-recipes.html</string>
+
+    <string name="urlAllRecipe">https://www.shoprite.com.ng/recipes.html</string>
+
+
+    <string name="notificationContent">Be the first to see...Dive in and create a wholesome meal for every taste</string>
+    <string name="notificationTitle">New recipes added today</string>
+</resources>

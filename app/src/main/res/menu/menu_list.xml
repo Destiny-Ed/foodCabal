@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Baby Recipes"
+        android:id="@+id/babyRecipe"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="Share the love"
+        android:id="@+id/share"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="About"
+        android:id="@+id/about"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="Rate The App"
+        android:id="@+id/rate"
+        app:showAsAction="never"/>
+
+</menu>
