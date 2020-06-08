@@ -7,10 +7,10 @@
 
     <string name="reset_password">Reset Password</string>
 
-    <string name="appID">ca-app-pub-8573825847307688~9067364986</string>
+    <string name="appID"></string>
 
-    <string name="banner_ads_unit">ca-app-pub-8573825847307688/9072956611</string>
-    <string name="instatial_ads_unit">ca-app-pub-8573825847307688/4737237733</string>
+    <string name="banner_ads_unit"></string>
+    <string name="instatial_ads_unit">/string>
 
     <string name="errorUrl">file:///android_asset/error.html</string>
 
