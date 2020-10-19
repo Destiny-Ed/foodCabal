@@ -1,11 +1,9 @@
 package com.king.foodcabal
 
-import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
-import android.net.http.SslError
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -20,26 +18,32 @@ class BabyRecipes : AppCompatActivity() {
     lateinit var webView : WebView
     private lateinit var mInterstitialAd: InterstitialAd
 
+    private lateinit var auth : FirebaseAuth
+
     private val bannerUnitId : String by lazy {
 
-            "BANNER UNIT ID"
+//            "BANNER UNIT ID"
         //test ads_banner_unit
 //        "ca-app-pub-3940256099942544/6300978111"
+        "ca-app-pub-1700196351561262/8845268395"
 
     }
     private val appInstiatialUnitId : String by lazy {
-        "instertitial unit id"
+//        "instertitial unit id"
+
+        "ca-app-pub-1700196351561262/1392802714"
         //test ads_banner_unit
 //        "ca-app-pub-3940256099942544/1033173712"
     }
 
-    lateinit var babyUrl : String
-    lateinit var errorUrl : String
+    private lateinit var babyUrl : String
+    private lateinit var errorUrl : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_baby_recipes)
 
+        auth = FirebaseAuth.getInstance()
 
         //support action back button
         var actionBar = supportActionBar
@@ -61,7 +65,7 @@ class BabyRecipes : AppCompatActivity() {
         //for instialtial
         mInterstitialAd = InterstitialAd(this)
 
-        initializeInterstitialAd(bannerUnitId)
+        initializeInterstitialAd(appInstiatialUnitId)
 
         loadInterstitialAd(appInstiatialUnitId)
 
@@ -82,7 +86,7 @@ class BabyRecipes : AppCompatActivity() {
         webView.settings.allowFileAccess = true
 
         //get the instance of the webViewClient to handle how the page should load
-        var webViewClient = myViewClient()
+        var webViewClient = MyViewClien()
         webView.webViewClient = webViewClient
 
 
@@ -118,7 +122,7 @@ class BabyRecipes : AppCompatActivity() {
     }
 
     private fun initializeInterstitialAd(appUnitId: String) {
-        MobileAds.initialize(this, bannerUnitId)
+        MobileAds.initialize(this, appUnitId)
     }
 
     //banner function
@@ -132,7 +136,7 @@ class BabyRecipes : AppCompatActivity() {
     }
     //ends
 
-    inner class myViewClient : WebViewClient() {
+    inner class MyViewClien : WebViewClient() {
         var progress = ProgressDialog(this@BabyRecipes)
 
 
@@ -195,17 +199,6 @@ class BabyRecipes : AppCompatActivity() {
 
     }
 
-    //Mobile ads function :-only for adMob
-//    private fun initializeAdd(appUnitId: String) {
-//        MobileAds.initialize(this, appUnitId)
-//
-//    }
-    //LoadBanner ads :- only for adMob
-//    private fun loadBanner() {
-//        var adRequest = AdRequest.Builder().build()
-//        //show ad
-//        adView.loadAd(adRequest)
-//    }
 
     //for action bar back arrow icon
     override fun onSupportNavigateUp(): Boolean {
@@ -229,7 +222,7 @@ class BabyRecipes : AppCompatActivity() {
             R.id.allRecipe -> showInstatitialAds()
             R.id.share -> share()
             R.id.about -> startActivity(Intent(baseContext, about::class.java))
-            R.id.rate -> RateApp()
+            R.id.rate -> auth.signOut()
         }
         return super.onOptionsItemSelected(item)
     }

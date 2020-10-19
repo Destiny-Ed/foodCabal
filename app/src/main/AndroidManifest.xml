@@ -4,9 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -15,9 +15,13 @@
         android:roundIcon="@mipmap/applogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Auth.ResetPassword"></activity>
+        <activity android:name=".Auth.SignUp" />
+        <activity android:name=".Auth.Login" />
+
         <receiver
             android:name=".AlarmBroadCast"
-            android:enabled="true"></receiver>
+            android:enabled="true" />
 
         <activity
             android:name=".error"
@@ -51,7 +55,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="AdMob App Id" />
+            android:value="@string/appID" />
     </application>
 
 </manifest>

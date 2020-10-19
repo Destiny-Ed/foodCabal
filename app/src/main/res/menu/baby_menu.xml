@@ -8,7 +8,7 @@
         app:showAsAction="ifRoom"/>
 
     <item
-        android:title="Share the love"
+        android:title="Teach other how to cook"
         android:id="@+id/share"
         app:showAsAction="never"/>
 
@@ -18,7 +18,7 @@
         app:showAsAction="never"/>
 
     <item
-        android:title="Rate The App"
+        android:title="Log out"
         android:id="@+id/rate"
         app:showAsAction="never"/>
 

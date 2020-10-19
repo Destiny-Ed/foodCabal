@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import hotchemi.android.rate.AppRate
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.system.exitProcess
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
     private var alarmMgr: AlarmManager? = null
     private lateinit var alarmIntent: PendingIntent
 
+    private lateinit var auth : FirebaseAuth
+
     private lateinit var webView : WebView
 
     //get the instance of adView
@@ -45,13 +48,17 @@ class MainActivity : AppCompatActivity() {
 
     private val bannerUnitId : String by lazy {
 
-        "BANNER ADS UNIT ID"
+       // "BANNER ADS UNIT ID"
 //        "ca-app-pub-3940256099942544/6300978111"
+
+        "ca-app-pub-1700196351561262/8845268395"
     }
 
     private val appInstiatialUnitId : String by lazy {
-        "iNTERTIAL UNIT ID"
+       // "iNTERTIAL UNIT ID"
 //        "ca-app-pub-3940256099942544/1033173712"
+
+        "ca-app-pub-1700196351561262/1392802714"
     }
 
     lateinit var url : String
@@ -65,6 +72,8 @@ class MainActivity : AppCompatActivity() {
         var actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
 
+        auth = FirebaseAuth.getInstance()
+
 
         //get adView instance here
         adView = findViewById(R.id.adView)
@@ -73,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         errorUrl = "file:///android_asset/error.html"
         url = "https://www.shoprite.com.ng/recipes.html"
 
-        //initialize add here by calling the function
+        //initialize add here by calling the function Banner ads
         initializeAds(bannerUnitId)
 
         //load banner function
@@ -85,6 +94,19 @@ class MainActivity : AppCompatActivity() {
         initializeInterstitialAd(bannerUnitId)
 
         loadInterstitialAd(appInstiatialUnitId)
+
+
+
+        /**
+         * This will always ask user to review app
+         */
+        AppRate.with(this)
+            .setInstallDays(0)
+            .setLaunchTimes(3)
+            .setRemindInterval(2)
+            .monitor()
+
+        AppRate.showRateDialogIfMeetsConditions(this)
 
 
 
@@ -101,7 +123,7 @@ class MainActivity : AppCompatActivity() {
 //
 //        webView.settings.setAppCachePath(applicationContext.filesDir.absolutePath + "/cache")
         webView.settings.javaScriptEnabled = true
-        var webViewClient = myWebView()
+        val webViewClient = myWebView()
         webView.webViewClient = webViewClient
 
 
@@ -139,7 +161,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeInterstitialAd(mAppUnitId: String) {
-        MobileAds.initialize(this, bannerUnitId)
+        MobileAds.initialize(this, mAppUnitId)
     }
 
     //banner ads
@@ -148,7 +170,7 @@ class MainActivity : AppCompatActivity() {
     }
     //load banner ads
     private fun loadBannerAds() {
-        var adRequest = AdRequest.Builder().build()
+        val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
     }
 
@@ -207,7 +229,7 @@ class MainActivity : AppCompatActivity() {
             R.id.babyRecipe -> showInstatitialAds()
             R.id.share -> share()
             R.id.about -> startActivity(Intent(baseContext, about::class.java))
-            R.id.rate -> RateApp()
+            R.id.rate -> auth.signOut()
         }
         return super.onOptionsItemSelected(item)
     }

@@ -15,7 +15,6 @@
         android:id="@+id/adViewBaby"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ads_unit">
     </com.google.android.gms.ads.AdView>

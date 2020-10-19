@@ -10,8 +10,8 @@
     tools:context=".splash_screen">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginBottom="30dp"
         android:id="@+id/splashImage"
         android:src="@drawable/applogowhite"

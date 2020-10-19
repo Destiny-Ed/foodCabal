@@ -7,10 +7,10 @@
 
     <string name="reset_password">Reset Password</string>
 
-    <string name="appID"></string>
+    <string name="appID">ca-app-pub-1700196351561262~2471431730</string>
 
-    <string name="banner_ads_unit"></string>
-    <string name="instatial_ads_unit">/string>
+    <string name="banner_ads_unit">ca-app-pub-1700196351561262/8845268395</string>
+    <string name="instatial_ads_unit">ca-app-pub-1700196351561262/1392802714</string>
 
     <string name="errorUrl">file:///android_asset/error.html</string>
 
@@ -19,6 +19,6 @@
     <string name="urlAllRecipe">https://www.shoprite.com.ng/recipes.html</string>
 
 
-    <string name="notificationContent">Be the first to see...Dive in and create a wholesome meal for every taste</string>
+    <string name="notificationContent">Be the first to see…Dive in and create a wholesome meal for every taste</string>
     <string name="notificationTitle">New recipes added today</string>
 </resources>

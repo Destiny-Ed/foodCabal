@@ -21,7 +21,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="200dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:id="@+id/splashImage"
                 android:src="@drawable/applogo"/>
@@ -34,7 +34,7 @@
                 android:layout_below="@id/splashImage"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Free Recipe App"
+                android:text="V2.3"
                 android:textColor="#090808"
                 android:textSize="30sp" />
 
