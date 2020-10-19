@@ -229,7 +229,7 @@ class MainActivity : AppCompatActivity() {
             R.id.babyRecipe -> showInstatitialAds()
             R.id.share -> share()
             R.id.about -> startActivity(Intent(baseContext, about::class.java))
-            R.id.rate -> auth.signOut()
+            R.id.rate -> RateApp()
         }
         return super.onOptionsItemSelected(item)
     }
